@@ -71,6 +71,8 @@ R12 : 줄임 ×6 (6)
 - 필요한 실 색상 및 예상 사용량
 - 파츠 조립 위치 다이어그램
 
+> 출력 형식의 상세 정의(구조화 JSON 스키마, 검증 규칙, 렌더링 규칙)는 [**spec/output-spec.md**](./spec/output-spec.md)를 참고하세요.
+
 ## 📖 용어 정리
 
 | 약어 | 영문 | 한글 |
@@ -92,6 +94,11 @@ R12 : 줄임 ×6 (6)
 Amigurumi/
 ├── README.md          # 모델 개요 (이 문서)
 ├── CHANGELOG.md       # 버전별 변경 이력
+├── spec/              # 모든 버전이 공유하는 출력 규격
+│   ├── output-spec.md         # 출력 정의서
+│   ├── pattern.schema.json    # 구조화 도안 JSON Schema
+│   ├── validate_pattern.py    # 도안 검증기 (코 수 계산 등)
+│   └── examples/              # 예시 도안 (JSON + 렌더링 결과)
 ├── v0.1/              # 버전별 디렉터리
 │   ├── README.md      # 해당 버전의 접근 방식 / 결과 / 한계
 │   ├── src/           # 소스 코드

@@ -1,0 +1,128 @@
+{
+  "schema_version": "0.1",
+  "meta": {
+    "title": "동글 병아리",
+    "description": "몸통과 머리가 하나로 된 공 모양 병아리. 형식 설명용 예시 도안.",
+    "difficulty": "beginner",
+    "finished_height_cm": 7,
+    "terminology": "US"
+  },
+  "materials": {
+    "hook_mm": 3.0,
+    "yarns": [
+      { "id": "Y1", "name": "노랑", "hex": "#F6D33C", "weight": 3, "estimated_m": 35 },
+      { "id": "Y2", "name": "주황", "hex": "#F08A24", "weight": 3, "estimated_m": 2 },
+      { "id": "Y3", "name": "분홍", "hex": "#F4A7B9", "weight": 3, "estimated_m": 1 }
+    ],
+    "notions": [
+      { "type": "safety_eyes", "size_mm": 8, "quantity": 2 },
+      { "type": "fiberfill" },
+      { "type": "stitch_marker" },
+      { "type": "tapestry_needle" }
+    ]
+  },
+  "gauge": {
+    "note": "게이지는 중요하지 않습니다. 솜이 비치지 않을 만큼 촘촘하게 떠주세요."
+  },
+  "notes": [
+    "모든 파츠는 나선뜨기로 뜹니다. 단 시작마다 표시핀을 옮겨 꽂아주세요.",
+    "괄호 () 안은 반복, 단 끝의 (n)은 그 단의 총 코 수입니다."
+  ],
+  "parts": [
+    {
+      "id": "body",
+      "name": "몸통",
+      "quantity": 1,
+      "yarn": "Y1",
+      "construction": "spiral",
+      "start": { "type": "magic_ring", "count": 6 },
+      "rounds": [
+        { "from": 1, "to": 1, "stitches": [{ "op": "sc", "n": 6 }], "count": 6 },
+        { "from": 2, "to": 2, "stitches": [{ "op": "inc", "n": 6 }], "count": 12 },
+        { "from": 3, "to": 3, "stitches": [{ "op": "repeat", "times": 6, "body": [{ "op": "sc" }, { "op": "inc" }] }], "count": 18 },
+        { "from": 4, "to": 4, "stitches": [{ "op": "repeat", "times": 6, "body": [{ "op": "sc" }, { "op": "inc" }, { "op": "sc" }] }], "count": 24, "notes": "늘림 위치를 엇갈려 육각형 모양을 방지합니다." },
+        { "from": 5, "to": 5, "stitches": [{ "op": "repeat", "times": 6, "body": [{ "op": "sc", "n": 3 }, { "op": "inc" }] }], "count": 30 },
+        { "from": 6, "to": 6, "stitches": [{ "op": "repeat", "times": 6, "body": [{ "op": "sc", "n": 2 }, { "op": "inc" }, { "op": "sc", "n": 2 }] }], "count": 36 },
+        { "from": 7, "to": 12, "stitches": [{ "op": "sc", "n": 36 }], "count": 36,
+          "actions": [{ "type": "insert_safety_eyes", "between_rounds": [9, 10], "spacing_stitches": 6 }] },
+        { "from": 13, "to": 13, "stitches": [{ "op": "repeat", "times": 6, "body": [{ "op": "sc", "n": 4 }, { "op": "dec" }] }], "count": 30 },
+        { "from": 14, "to": 14, "stitches": [{ "op": "repeat", "times": 6, "body": [{ "op": "sc", "n": 3 }, { "op": "dec" }] }], "count": 24 },
+        { "from": 15, "to": 15, "stitches": [{ "op": "repeat", "times": 6, "body": [{ "op": "sc", "n": 2 }, { "op": "dec" }] }], "count": 18,
+          "actions": [{ "type": "stuff" }] },
+        { "from": 16, "to": 16, "stitches": [{ "op": "repeat", "times": 6, "body": [{ "op": "sc" }, { "op": "dec" }] }], "count": 12 },
+        { "from": 17, "to": 17, "stitches": [{ "op": "dec", "n": 6 }], "count": 6,
+          "actions": [{ "type": "stuff" }] }
+      ],
+      "stuffing": "firm",
+      "finish": { "type": "close" }
+    },
+    {
+      "id": "beak",
+      "name": "부리",
+      "quantity": 1,
+      "yarn": "Y2",
+      "construction": "spiral",
+      "start": { "type": "magic_ring", "count": 4 },
+      "rounds": [
+        { "from": 1, "to": 1, "stitches": [{ "op": "sc", "n": 4 }], "count": 4 },
+        { "from": 2, "to": 2, "stitches": [{ "op": "repeat", "times": 2, "body": [{ "op": "sc" }, { "op": "inc" }] }], "count": 6 },
+        { "from": 3, "to": 3, "stitches": [{ "op": "sc", "n": 6 }], "count": 6 }
+      ],
+      "stuffing": "none",
+      "finish": { "type": "leave_tail", "tail_cm": 20 }
+    },
+    {
+      "id": "wing",
+      "name": "날개",
+      "quantity": 2,
+      "yarn": "Y1",
+      "construction": "spiral",
+      "start": { "type": "magic_ring", "count": 6 },
+      "rounds": [
+        { "from": 1, "to": 1, "stitches": [{ "op": "sc", "n": 6 }], "count": 6 },
+        { "from": 2, "to": 2, "stitches": [{ "op": "repeat", "times": 3, "body": [{ "op": "sc" }, { "op": "inc" }] }], "count": 9 },
+        { "from": 3, "to": 4, "stitches": [{ "op": "sc", "n": 9 }], "count": 9 },
+        { "from": 5, "to": 5, "stitches": [{ "op": "repeat", "times": 3, "body": [{ "op": "sc" }, { "op": "dec" }] }], "count": 6 }
+      ],
+      "stuffing": "none",
+      "finish": { "type": "leave_tail", "tail_cm": 25 },
+      "notes": "솜을 넣지 않고 납작하게 눌러 입구를 맞대어 꿰맵니다."
+    }
+  ],
+  "assembly": [
+    {
+      "step": 1,
+      "part": "beak",
+      "target": "body",
+      "position": { "rounds": [10, 11], "anchor": "front_center", "offset_stitches": 0 },
+      "method": "whipstitch",
+      "instruction": "두 눈 사이 가운데, 10~11단에 부리를 꿰맵니다. 꿰매기 전에 부리 안에 솜을 조금 넣어도 좋습니다."
+    },
+    {
+      "step": 2,
+      "part": "wing",
+      "target": "body",
+      "position": { "rounds": [9, 12], "anchor": "side_left", "offset_stitches": 0 },
+      "method": "whipstitch",
+      "instruction": "날개 하나를 몸통 왼쪽 옆면 9~12단에 세로로 꿰맵니다."
+    },
+    {
+      "step": 3,
+      "part": "wing",
+      "target": "body",
+      "position": { "rounds": [9, 12], "anchor": "side_right", "offset_stitches": 0 },
+      "method": "whipstitch",
+      "instruction": "나머지 날개를 반대쪽 같은 위치에 꿰맵니다."
+    }
+  ],
+  "details": [
+    {
+      "type": "embroidery",
+      "target": "body",
+      "feature": "cheeks",
+      "yarn": "Y3",
+      "position": { "rounds": [11, 11], "anchor": "front_center", "offset_stitches": 5 },
+      "instruction": "양쪽 눈 바깥 아래에 2코 너비로 가로 자수를 2~3번 겹쳐 볼을 표현합니다."
+    }
+  ]
+}
